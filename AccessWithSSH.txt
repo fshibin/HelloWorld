@@ -1,0 +1,6 @@
+Steps:
+1. generate RSA key pairs: ssh-keygen -t rsa -b 4096 -C "your_email@example.com". Use default filenames and no passphrase.
+2. make sure ssh-agent is up: eval $(ssh-agent -s). The output should be like: Agent pid 59566.
+3. add the ssh key to ssh-agent: ssh-add ~/.ssh/id_rsa
+4. add public key to GitHub via Web GUI.
+5. test your account: ssh -T git@github.com
