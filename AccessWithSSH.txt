@@ -4,3 +4,28 @@ Steps:
 3. add the ssh key to ssh-agent: ssh-add ~/.ssh/id_rsa
 4. add public key to GitHub via Web GUI.
 5. test your account: ssh -T git@github.com
+
+
+At home: cannot access company website like cmd svn site.
+In office: cannot access GitHub via port other than 80. Web GUI is okay.
+
+
+CYGWIN/MINGW:
+1. Use commands like uname, whoami, env, mount, which, ls /usr/bin to know file system structure, command list, etc.
+2. Git Bash uses MINGW
+
+Git:
+1. Windows CMD (CYGWIN_NT-6.1), Git CMD (CYGWIN_NT-6.1): any differences? Yes. 后者启动了bash和mintty，前者仅仅为windows的cmd命令。
+2. How to create local repository (how to specify repository folder), how to make working folder, how to co/ci/commit? 不需要checkout也能修改和commit。没有checkin命令。
+3. Git GUI定位到最近的一个repository。可以同时定义多个repository folder，可以是包含的关系，或者不包含的关系。Repository所在的目录就是working folder. .git目录保存metadata。
+4. How to connect to remote repository? (company nw: cannot access github:443) How to make a local copy? How to ci/cm? Connect to GitHub? -> Git clone/push/fetch.
+When do git clone, the URL can be based on HTTP. However, in Git Bash, git push prompts username/password. To fix this, change the URL: git remote set-url origin git@github.com:<Username>/<Project>[.git]
+SSH RSA key pair needs to be generated. Private key: ssh-add ~/.ssh/id_rsa; public key: upload key content to GitHub via web GUI: ~/.ssh/id_rsa.pub
+5. Git Bash (MINGW64_NT): ssh keys. ssh-agent, ssh-keygen. Etc. Copy pub key to remote server (GitHub has menu on web GUI).
+6. Git GUI: how to navigate through repository/working folder? (done) How to navigate Remote repository? 
+
+GitHut:
+1. Web based operations
+2. GitHub Desktop: okay!
+3. CLI access: git? - Yes!
+
