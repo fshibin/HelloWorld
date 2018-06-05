@@ -29,3 +29,4 @@ GitHut:
 2. GitHub Desktop: okay!
 3. CLI access: git? - Yes!
 
+Turned out to be duplicated clones, so that I cannot see changes in one repository...
